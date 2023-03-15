@@ -30,5 +30,9 @@ export class KahvilaComponent {
     }
     );
   }
+
+  windowAlert(){
+    window.alert("Tuote lisätty! Tuotteet tulostuvat alaspäin!");
+  }
   
 }
