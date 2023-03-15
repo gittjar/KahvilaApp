@@ -1,0 +1,19 @@
+<h2>Olen asiakas komponentti ja voin lähettää viestejä keittiöön!</h2>
+<p>
+  <b>Vastaus keittiöstä : "{{ receivedKitchenMessage }}"</b>
+</p>
+
+<p>
+    Pöytätieto:<br>
+       <select #messageFromTable >
+           <option default>Valitse pöytäsi josta viestität</option>
+           <option>Nurkkapöytä 1</option>
+           <option>Pyöreäpöytä 2</option>
+           <option>Pystypöytä 3</option>
+           <option>Ikkunapöytä 4</option>
+           <option>Pöytä 7</option>
+       </select>
+   </p>
+   
+<button class="btn btn-primary" (click)="sendMessageToKitchen(messageToSendC, messageFromTable.value)">Lähetä viesti keittiöön ></button>
+<hr>

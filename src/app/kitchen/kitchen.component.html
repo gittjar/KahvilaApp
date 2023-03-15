@@ -1,0 +1,17 @@
+<h2>Hei! Olen keittiöstä.</h2>
+<h2>Lähetä viesti asiakkaalle!</h2>
+Otan myös vastaan asiakkaan viestin.<p>
+  <b>Asiakkaan vastaus : "{{ receivedAsiakasMessage }}"</b>
+  <br>
+  <b>Asiakkaan pöytä-id : "{{ receivedTableInformation }}"</b>
+</p>
+<button class="btn btn-primary"  (click)="sendToAsiakas('Terveiset keittiöstä! Oliko kahvi hyvää?')">Lähetä asiakkaalle viesti ></button>
+<hr>
+
+<app-asiakas 
+[receivedKitchenMessage]="messageToSendP" (messageToEmitAsiakas)="getMessage($event)"
+[receivedKitchenMessage]="messageToSendP" (messageToEmitFromTable)="getTableInformation($event)"
+
+
+
+></app-asiakas>

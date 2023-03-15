@@ -1,14 +1,16 @@
-<div class="container">
 
-  
+
+<div class="container">
 <app-kahvila
 (myyntiTapahtuma)="kahvinMyynti($event)"
 (tarjoiluTapahtuma)="kahvinTarjoilu($event)"
 ></app-kahvila>
+
+
     <hr>
 
-
-
+    <!--HERE IS KITCHEN COMPONENT: PARENT OF ASIAKAS COMPONENT-->
+<app-kitchen></app-kitchen>
 
 
     <div class="row">
