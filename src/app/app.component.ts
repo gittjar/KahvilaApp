@@ -7,11 +7,10 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  tarjoiluOhje = [];
-  poydanNumero = '';
-  myyntiMaara = '';
+  tarjoiluOhje: any[] = [];
+  poydanNumero: string | undefined;
+  myyntiMaara: string | undefined;
   faCoffee = faCoffee;
-  
 
   kahviaMyyty() {
     this.tarjoiluOhje.push({
