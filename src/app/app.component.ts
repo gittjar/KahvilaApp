@@ -7,24 +7,24 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   tarjoiluOhje: any[] = [];
-  poydanNumero: string | undefined;
-  myyntiMaara: string | undefined;
   faCoffee = faCoffee;
 
-  kahviaMyyty() {
+  kahvinMyynti(myyntiData: {poydanNumero: string, myyntiMaara: string}) {
     this.tarjoiluOhje.push({
       tyo: 'myyty',
-      poydanNumero: this.poydanNumero,
-      myyntiMaara: this.myyntiMaara
+      poydanNumero: myyntiData.poydanNumero,
+      myyntiMaara: myyntiData.myyntiMaara
     });
   }
 
-  kahviaTarjoiltu() {
+  kahvinTarjoilu(tarjoiluData: {poydanNumero: string, myyntiMaara: string}) {
     this.tarjoiluOhje.push({
       tyo: 'tarjoiltu',
-      poydanNumero: this.poydanNumero,
-      myyntiMaara: this.myyntiMaara
+      poydanNumero: tarjoiluData.poydanNumero,
+      myyntiMaara: tarjoiluData.myyntiMaara
     });
   }
+ 
 }

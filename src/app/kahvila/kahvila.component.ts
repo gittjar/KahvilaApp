@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, Input } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-kahvila',
@@ -7,18 +7,27 @@ import { Component, EventEmitter, Output, Input } from '@angular/core';
 })
 export class KahvilaComponent {
 
-  @Input() receivedParentMessageKPL: string | undefined;
-  @Output() outputEvent4 = new EventEmitter<string>();
-  messageToSendKappalemaara: string | undefined;
+  uusipoydanNumero = '';
+  uusimyyntiMaara = '';
+  // EQUALS TO APP COMPONENT EVENTS!
+  @Output() myyntiTapahtuma = new EventEmitter<{poydanNumero: string, myyntiMaara: string}>();
+  @Output() tarjoiluTapahtuma = new EventEmitter<{poydanNumero: string, myyntiMaara: string}>();
 
+  
 
-  kahviaMyyty(lukema: string){
-    this.outputEvent4.emit(lukema);
+  kahviaMyyty() {
+    this.myyntiTapahtuma.emit({
+      poydanNumero: this.uusipoydanNumero,
+      myyntiMaara: this.uusimyyntiMaara
+    });
   }
 
-
-kahviaTarjoiltu() {
-};
+  kahviaTarjoiltu() {
+    this.tarjoiluTapahtuma.emit({
+      poydanNumero: this.uusipoydanNumero,
+      myyntiMaara: this.uusimyyntiMaara
+    });
+  }
 
  
   

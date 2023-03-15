@@ -1,15 +1,14 @@
   <!-- Kahvila-komponentin alku -->
   <div class="row">
     <div class="col-md-12">
-      <h1>Kahvin myynti</h1>
+      <h1>Kahvin myynti .NET22S Jarno</h1>
       <label>Pöydän numero</label>
-      <input type="text" class="form-control mb-2" #uusipoydanNumero>
+      <input type="text" class="form-control mb-2" [(ngModel)]="uusipoydanNumero">
       <label>Montako annosta</label>
-      <input type="text" class="form-control mb-2" #messageToSendKappalemaara>
-      
-      <button class="btn btn-primary mr-2" (click)="kahviaMyyty(messageToSendKappalemaara.value)">Myynti</button>
+      <input type="text" class="form-control mb-2" [(ngModel)]="uusimyyntiMaara">
+  
+      <button class="btn btn-primary mr-2" (click)="kahviaMyyty()">Myynti</button>
       <button class="btn btn-primary" (click)="kahviaTarjoiltu()">Tarjoilu</button>
     </div>
-    
   </div>
   <!-- Kahvila-komponentin loppu -->

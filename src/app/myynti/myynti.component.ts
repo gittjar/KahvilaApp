@@ -10,7 +10,7 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 export class MyyntiComponent {
   faCoffee = faCoffee;
 
-  @Input('tarjoilijalle') ohje!: { tyo: string; poydanNumero: string; myyntiMaara: string; };
+  @Input('tarjoilijalle') ohje!: { tyo: string  ; poydanNumero: string; myyntiMaara: string; };
 
 
 }
