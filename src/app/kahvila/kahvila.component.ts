@@ -18,19 +18,17 @@ export class KahvilaComponent {
   kahviaMyyty() {
     this.myyntiTapahtuma.emit({
       poydanNumero: this.uusipoydanNumero,
-      myyntiMaara: this.uusimyyntiMaara
+      myyntiMaara: this.uusimyyntiMaara,
+
     });
   }
 
   kahviaTarjoiltu() {
     this.tarjoiluTapahtuma.emit({
       poydanNumero: this.uusipoydanNumero,
-      myyntiMaara: this.uusimyyntiMaara
-    });
+      myyntiMaara: this.uusimyyntiMaara,
+    }
+    );
   }
-
- 
-  
-
   
 }
