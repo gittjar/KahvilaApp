@@ -1,8 +1,6 @@
 
   <h2>Kahvin myynti - .NET22S Jarno</h2>
   
-
-
   <!-- Kahvila-komponentin alku -->
   <div class="row">
     <div class="col-md-12">
@@ -12,11 +10,8 @@
       <label>Montako annosta</label>
       <input type="text" class="form-control mb-2" [(ngModel)]="uusimyyntiMaara">
   
-      <button class="btn btn-primary mr-2" (click)="kahviaMyyty()"
-      (click)="onResetDismiss()" cButton color="secondary"
-      
-      >Myynti</button>
-      <button class="btn btn-primary" (click)="kahviaTarjoiltu()">Tarjoilu</button>
+      <button class="btn btn-primary mr-2" (click)="windowAlert()" (click)="kahviaMyyty()">Myynti</button>
+      <button class="btn btn-primary" (click)="windowAlert()" (click)="kahviaTarjoiltu()">Tarjoilu</button>
     </div>
   </div>
   <!-- Kahvila-komponentin loppu -->
